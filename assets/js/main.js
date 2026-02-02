@@ -19,23 +19,24 @@ per controllare che la vostra logica sui prezzi funzioni correttamente, provate 
 */
 
 
+const prezzoAlKm = 0.21;
+const distanza = prompt('Quanti KM devi percorrere?');
+const eta = prompt('Quanti anni hai?');
+const prezzoTratta = distanza * prezzoAlKm
+let prezzoBiglietto;
 
-const distanza_km = '100';
-const passeggero_eta = 70;
-const prezzo_km = 0.21;
+if ( eta < 18 ) {
 
-const distanza_prezzo = distanza_km * prezzo_km
+    prezzoBiglietto = prezzoTratta - prezzoTratta * 0.2
 
-if ( passeggero_eta < 18 ) {
+} else if ( eta >= 65) {
 
-    console.log('Biglietto minorenni', distanza_prezzo - (distanza_prezzo * 0.2) )
-
-} else if ( passeggero_eta >= 65) {
-
-    console.log('passeggero over 65', distanza_prezzo - (distanza_prezzo * 0.4) )
+    prezzoBiglietto = prezzoTratta - prezzoTratta * 0.4
 
 } else {
 
-    console.log('Biglietto ordinario', distanza_prezzo)
+    prezzoBiglietto = prezzoTratta
 
 }
+
+console.log('Totale', prezzoBiglietto.toFixed(2));
