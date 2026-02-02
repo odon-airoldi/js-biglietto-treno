@@ -39,4 +39,4 @@ if ( eta < 18 ) {
 
 }
 
-console.log('Totale', prezzoBiglietto.toFixed(2));
+console.log(`Totale ${prezzoBiglietto.toFixed(2)}€`);
