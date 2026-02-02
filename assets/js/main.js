@@ -21,15 +21,21 @@ per controllare che la vostra logica sui prezzi funzioni correttamente, provate 
 
 
 const distanza_km = '100';
-const passeggero_eta = 18;
+const passeggero_eta = 70;
 const prezzo_km = 0.21;
 
+const distanza_prezzo = distanza_km * prezzo_km
 
 if ( passeggero_eta < 18 ) {
-    console.log('passeggero minorenne')
+
+    console.log('Biglietto minorenni', distanza_prezzo - (distanza_prezzo * 0.2) )
+
 } else if ( passeggero_eta >= 65) {
-    console.log('passeggero over 65')
+
+    console.log('passeggero over 65', distanza_prezzo - (distanza_prezzo * 0.4) )
+
 } else {
-    console.log('paseggero maggiorenne e under 65')
-    console.log(distanza_km * prezzo_km)
+
+    console.log('Biglietto ordinario', distanza_prezzo)
+
 }
